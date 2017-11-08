@@ -1,0 +1,419 @@
+/*
+File Name: style.less
+Date: 10/24/2017
+Programmer: Mario Lopriore
+*/
+
+
+/* These are imported from the mixins.less file. */
+
+@import 'mixins.less';
+@import 'palette.less';
+
+/* Styling the navigation */
+
+nav {
+    background-color: @color5;
+    line-height: 2em;
+    padding: .5em;
+    text-align: center;
+    ul {
+        li {
+            a {
+                font-family: @headlineFont;
+                list-style-type: none;
+            }
+        }
+    }
+    .mobile-nav {
+        margin: .5em auto;
+    }
+    /* Mobile navigation styling classes for jQuery menu. */
+    .menu-btn div {
+        position: absolute;
+        left: 100%;
+        top: 64%;
+        padding-right: 8px;
+        margin-top: -0.50em;
+        line-height: 1.2;
+        font-size: 18px;
+        font-weight: 200;
+        vertical-align: middle;
+        z-index: 99;
+    }
+    /* This is for the hamburger's horizontal lines. */
+    .menu-btn span {
+        display: block;
+        width: 19px;
+        height: 3px;
+        margin: 4px auto;
+        background: @color1;
+        z-index: 99;
+    }
+    /* The styling for the links in the dropdown menu. */
+    .responsive-menu {
+        display: none;
+        a {
+            color: @color1;
+            font-size: 1.1em;
+            line-height: 3;
+            text-decoration: none;
+        }
+    }
+    .expand {
+        display: block !important;
+    }
+    /* This takes the larger menus out of play until min-width: 481px; */
+        .tablet-desk-menu {
+        display: none;
+    }
+}
+
+/* Initial header style and specific mobile header styling. */
+header {
+    h1 {
+        color: @color1;
+        font-family: @headlineFont;
+        text-align: center;
+    }
+    img {
+        display: block;
+        margin: auto;
+        padding-top: .8em;
+        width: 60%;
+    }
+    h3 {
+        color: @color1;
+        padding-bottom: 1em;
+    }
+    .tagLine {
+        color: @color3;
+        font-family: @taglineFont;
+        font-size: .8em;
+        font-weight: 500;
+        text-align: center;
+    }
+    .mobile_hero {
+        background-image: url(../images/mobile_hero.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+    button {
+        display: block;
+        margin: auto;
+        margin-bottom: 1.5em;
+        a {
+            color: @color2;
+            font-family: @taglineFont;
+            font-size: 1.3em;
+            font-weight: 600;
+            text-decoration: none; 
+        }   
+    }
+}
+
+/* Removing the tablet & desktop header. */
+
+.fullHeader {
+    display: none;
+}
+
+/* Stying for Main and Section content. */
+
+main {
+    background-color: @color1;
+}
+    h2 {
+    color: @color5;
+    font-family: @headlineFont;
+    line-height: 1.3em;
+    text-align: center;  
+}
+    h3 {
+        color: @color4;
+        font-family: @headlineFont;
+        line-height: 1.5em;
+        text-align: center;
+    }
+section {
+
+    h4 {
+//        border-left: @color2 5px solid;
+        font-family: @headlineFont;
+        margin: .5em 1em .3em;
+        padding: 1em;
+    }
+    h5 {
+        font-family: @bodyFont;
+        font-size: 1.2em;
+        margin: .5em 1.5em;
+    }
+    h6 {
+        color: @color4;
+        font-family: @bodyFont;
+        font-size: .8em;
+        margin: .5em 3em;
+    }
+    ul {
+        li {
+            font-family: @bodyFont;
+            line-height: 1.5em;
+            list-style-type: none;            
+            margin-left: 2.5em;
+        }
+    }
+    p {
+        color: @color5;
+        display: block;
+        font-family: @bodyFont;
+        line-height: 1.5;
+        padding: 0 1.5em 1.2em;
+        margin: auto;
+    }
+}
+
+.work {
+    img {
+        border: solid @color5;
+        border-radius: 15px;
+        border-width: 20px 5px 30px 5px;
+        display: block;
+        margin: 1em auto;
+        max-width: 75%;
+    }
+}
+
+form {
+    color: @color4;
+    font-family: @bodyFont;
+    margin: .2em .8em;
+    padding: .5em;
+    text-align: left;
+    h5 {
+        color: @color5;
+        font-size: 1.2em;
+        margin: .5em;
+    }
+    label {
+        padding: .5em;
+    }
+    input {
+        color: @color2;
+        font-family: @taglineFont;
+        font-weight: 500;
+    }
+    input[type=text] {
+        font-family: @bodyFont;
+        margin: .5em;
+        padding: .5em;
+        width: 95%;
+    }
+    input[type=submit] {
+        margin: .5em;
+    }
+    textarea {
+        font-family: @bodyFont;
+        margin: .5em;
+        padding: .5em;
+        width: 95%;
+    }
+}
+
+
+/* Style here to move the input areas away from the fields. */
+
+.inputArea {
+    margin: 1em 0;
+}
+
+footer {
+    background-color: @color5;
+    color: @color1;
+    text-align: center;
+    div {
+        .fa {
+            color: @color1;
+            font-size: 2em;
+            text-align: center;
+            padding: .7em .5em;
+        }
+        img {
+            display: inline-block;
+        }
+    }
+    p {
+        font-family: @bodyFont;
+        padding: .5em;
+        line-height: 1.2em;
+    }
+}
+
+
+
+/* ########################################################### TABLET CSS! */
+/* Tablet CSS code and up */
+@media only screen and (min-width: 481px) {
+    
+/* This can get taken care of after the desktop version is good to go... */
+   
+}
+  
+/* ########################################################### DESKTOP CSS! */
+/* Desktop CSS code and up */
+
+@media only screen and (min-width: 1025px) {
+    /* This is the navigation outside of the hamburger menu. */
+    .menu-btn {
+        display: none;
+    }
+    /* Removing the hamburger menu from tablet size and up. */
+    .responsive-menu {
+        display: none;
+    }
+    nav {
+        margin-top: 0;
+        .tablet-desk-menu {
+            display: block;
+            img {
+                margin: 0;
+                max-width: 35%;
+                padding-left: .8em;
+            }
+            ul {
+                background-color: @color5;
+                margin-top: .5em;
+                text-align: right;
+                li {
+                    display: inline;
+                    font-size: 1.1em;
+                    font-weight: 600;
+                    margin-left: 2.5em;
+                    padding: 0 1em 0 0;
+                    a {
+                        color: @color1;
+                        text-decoration: none;
+                    }
+                    a:visited {
+                        color: @color3;
+                    }
+                    a:hover {
+                        color: @color2;
+                    }
+                }
+            }
+        }
+    }    
+    
+
+    /* Removing the mobile header. */
+    .mobileHeader {
+        display: none;
+    }
+    
+    /* Restoring the desktop header. */
+    .fullHeader {
+        display: block;
+    }
+    
+    body {
+        background-image: url(../images/temp_hero_2.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0 -30px;
+        width: 100%;
+    }
+    /* Header adapted for tablet */
+    header {
+        height: 650px;
+        padding: 5em;
+        h1 {
+            color: @color1;
+            font-family: @headlineFont;
+            font-size: 2.5em;
+            font-weight: 600;
+            padding: 2em 0 1em;
+            text-align: center;
+        }
+        h2 {
+            color: @color1;
+            font-weight: 500;
+            text-align: center;
+        }
+        h3 {
+            color: @color1;
+            font-family: @headlineFont;
+            font-weight: 500;
+            text-align: center;
+        }
+        button {
+            display: block;
+            font-family: @taglineFont;
+            margin: auto;
+        }
+
+    }
+    section {
+        h3 {
+            font-weight: 700;
+            font-size: 1.5em;
+            padding: 0 2em;
+            text-align: center;
+        }
+        h4 {
+            color: @color4;
+            font-family: @headlineFont;
+        }
+        p {
+            padding: .5em 2em;
+            line-height: 1.5em;
+        }
+        ul {
+            li {
+                font-family: @bodyFont;
+                line-height: 1.8em;
+                margin-left: 3em;
+            }
+        }
+    }
+    form {
+        text-align: left;
+        label {
+            padding: .5em;
+        }
+    }
+    .work {
+        img {
+            border-width: 30px 5px 50px 5px;
+        }
+        p {
+            font-size: .9em;
+            margin-bottom: 2em;
+            padding: 0 4em;
+            text-align: center;
+        }
+    }
+}
+
+//    section {
+//        h4 {
+//            font-size: 1.2em;
+//            margin: .8em 2em .3em;
+//        }
+//        h5 {
+//            margin: 1em 4.5em;
+//        }
+//        h6 {
+//            font-size: 1.2em;
+//            margin: .5em 5em;
+//        }
+//        p {
+//            font-size: 1.2em;
+//            padding: .5em 3em;
+//        }
+//        ul {
+//            li {
+//                margin-left: 5em;
+//            }
+//        }
+//    }
