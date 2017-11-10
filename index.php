@@ -15,6 +15,17 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet"> 
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97175852-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-97175852-2');
+    </script>
+
+    
     <!-- Stylesheets in the css folder. -->
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/helper.css" rel="stylesheet">
@@ -32,7 +43,9 @@
 
     <!-- Include the 64 x 64 px favicon for the browser tab. -->
     <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">-->
-
+    
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <!-- Invisible reCAPTCHA script -->
 </head>
 
 <body>
