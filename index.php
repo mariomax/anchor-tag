@@ -11,7 +11,7 @@
     <title>Anchor Tag Design</title>
 
     <!-- Google fonts. Headline then Body font. -->
-    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet"> 
 

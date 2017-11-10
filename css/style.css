@@ -11,6 +11,42 @@ Date: 10/23/2017
 Programmer: Mario Lopriore
 */
 /*
+Template fonts...
+
+<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet"> 
+@headlineFont: 'Exo 2', sans-serif;
+
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
+@bodyFont:  'Noto Serif', serif;
+
+<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet"> 
+@taglineFont: 'Source Code Pro', monospace;
+
+
+Other fonts that I like...
+
+One style - always italic, but strong.
+<link href="https://fonts.googleapis.com/css?family=Contrail+One" rel="stylesheet"> 
+font-family: 'Contrail One', cursive;
+
+Wide, dark & slick. Originally a Thai font - weird.
+<link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet"> 
+font-family: 'Kanit', sans-serif;
+
+I've used this one several times.
+<link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet"> 
+font-family: 'Fjalla One', sans-serif;
+
+Pretty tight, but casual too.
+<link href="https://fonts.googleapis.com/css?family=Rambla" rel="stylesheet"> 
+font-family: 'Rambla', sans-serif;
+
+This is a top-heavy display font. Might give it a whirl...
+<link href="https://fonts.googleapis.com/css?family=Denk+One" rel="stylesheet"> 
+font-family: 'Denk One', sans-serif;
+
+*/
+/*
 File Name: palette.css
 Date: 10/23/17
 Programmer: Mario Lopriore
@@ -27,7 +63,7 @@ nav {
   /* This takes the larger menus out of play until min-width: 481px; */
 }
 nav ul li a {
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
   list-style-type: none;
 }
 nav .mobile-nav {
@@ -71,7 +107,7 @@ nav .tablet-desk-menu {
 /* Initial header style and specific mobile header styling. */
 header h1 {
   color: #ffffff;
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
   text-align: center;
 }
 header img {
@@ -119,18 +155,18 @@ main {
 }
 h2 {
   color: #000000;
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
   line-height: 1.3em;
   text-align: center;
 }
 h3 {
   color: #1a5481;
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
   line-height: 1.5em;
   text-align: center;
 }
 section h4 {
-  font-family: 'Exo 2', sans-serif;
+  font-family: 'Fjalla One', sans-serif;
   margin: .5em 1em .3em;
   padding: 1em;
 }
@@ -260,7 +296,7 @@ footer p {
   nav .tablet-desk-menu ul li {
     display: inline;
     font-size: 1.1em;
-    font-weight: 600;
+    font-weight: 500;
     margin-left: 2.5em;
     padding: 0 1em 0 0;
   }
@@ -296,9 +332,9 @@ footer p {
   }
   header h1 {
     color: #ffffff;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-size: 2.5em;
-    font-weight: 600;
+    font-weight: 500;
     padding: 2em 0 1em;
     text-align: center;
   }
@@ -309,7 +345,7 @@ footer p {
   }
   header h3 {
     color: #ffffff;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
     font-weight: 500;
     text-align: center;
   }
@@ -319,14 +355,14 @@ footer p {
     margin: auto;
   }
   section h3 {
-    font-weight: 700;
+    font-weight: 500;
     font-size: 1.5em;
     padding: 0 2em;
     text-align: center;
   }
   section h4 {
     color: #1a5481;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Fjalla One', sans-serif;
   }
   section p {
     padding: .5em 2em;
