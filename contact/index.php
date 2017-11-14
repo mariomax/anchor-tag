@@ -1,7 +1,7 @@
 <?php
-// The top 37 lines (in full page view) are the section to add user responses to the database.
+// The top 37 lines are the section to add user responses to the database.
 // Only name (c_name) and email (c_email) are required fields.
-// PHP Mailer starts below that. It uses anchortagdesign@gmail.com as the scratch email.
+// PHP Mailer starts below that. It uses anchortagdesign@gmail.com as the email connection.
 if (isset($_POST['c_name'])) {
     $c_name = $_POST['c_name'];
     $c_email = $_POST['c_email'];
@@ -119,7 +119,7 @@ if (isset($_POST['c_name'])) {
     // The next curly bracket ends the initial if statement from line 5!
     // The else statement reloads the contact.html.php file if nothing was entered into the 'c_name' field.
 } else {
-    include('contact.php');
+    include 'contact.php';
 }
 
 // Google reCAPTCHA site key: 6Le9FDgUAAAAAF0drTqW9eeha60tvpbZPQNuPNit

@@ -69,7 +69,7 @@ nav {
     }
 }
 
-/* Initial header style and specific mobile header styling. */
+/* Initial header and specific mobile header styling. */
 header {
     h1 {
         color: @color1;
@@ -111,6 +111,20 @@ header {
             text-decoration: none; 
         }   
     }
+    
+    .errors {
+        h2,h3 {
+            color: @color2;
+            margin: auto;
+            padding: .5em 1em;
+        }
+        background-image: none;
+        img {
+            max-width: 70%;
+            margin: auto;
+            padding: 1.5em;
+        }
+    }
 }
 
 /* Removing the tablet & desktop header. */
@@ -139,8 +153,7 @@ main {
 section {
 
     h4 {
-//        border-left: @color2 5px solid;
-        font-family: @headlineFont;
+        font-family: @bodyFont;
         margin: .5em 1em .3em;
         padding: 1em;
     }
@@ -156,6 +169,7 @@ section {
         margin: .5em 3em;
     }
     ul {
+        clear: both;
         li {
             font-family: @bodyFont;
             line-height: 1.5em;
@@ -184,6 +198,23 @@ section {
     }
 }
 
+.process {
+    div {
+        .fa {
+            color: @color4;
+            display: block;
+            font-size: 2em;
+            float: left;
+            padding-left: .8em;
+            margin-top: .5em;
+        }
+    }
+    h3 {
+        padding-left: 4em;
+        text-align: left;
+    }
+}
+
 form {
     color: @color4;
     font-family: @bodyFont;
@@ -199,7 +230,7 @@ form {
         padding: .5em;
     }
     input {
-        color: @color2;
+        color: @color5;
         font-family: @taglineFont;
         font-weight: 500;
     }
@@ -210,6 +241,9 @@ form {
         width: 95%;
     }
     input[type=submit] {
+        color: @color2;
+        font-family: @taglineFont;
+        font-weight: 600;
         margin: .5em;
     }
     textarea {
@@ -327,6 +361,7 @@ footer {
     header {
         height: 650px;
         padding: 5em;
+        
         h1 {
             color: @color1;
             font-family: @headlineFont;
@@ -335,39 +370,53 @@ footer {
             padding: 2em 0 1em;
             text-align: center;
         }
+        
         h2 {
             color: @color1;
             font-weight: 500;
             text-align: center;
         }
+        
         h3 {
             color: @color1;
             font-family: @headlineFont;
             font-weight: 500;
             text-align: center;
         }
+        
         button {
             display: block;
             font-family: @taglineFont;
             margin: auto;
         }
-
+        
+        .errors {
+            h2,h3 {
+                color: @color1;
+                margin: auto;
+                padding: 1.5em;
+            }
+            
+            background-image: none;
+            img {
+                max-width: 25%;
+            }
+        }
     }
+    
     section {
         h3 {
             font-weight: 500;
             font-size: 1.5em;
-            padding: 0 2em;
+            padding: 0 3em;
             text-align: center;
         }
+        
         h4 {
             color: @color4;
-            font-family: @headlineFont;
+            font-family: @bodyFont;
         }
-        p {
-            padding: .5em 2em;
-            line-height: 1.5em;
-        }
+
         ul {
             li {
                 font-family: @bodyFont;
@@ -375,16 +424,19 @@ footer {
                 margin-left: 3em;
             }
         }
+        
     }
+    
     form {
         text-align: left;
         label {
             padding: .5em;
         }
     }
+    
     .work {
         img {
-            border-width: 30px 5px 50px 5px;
+            border-width: 40px 8px 65px 8px;
         }
         p {
             font-size: .9em;
@@ -393,27 +445,17 @@ footer {
             text-align: center;
         }
     }
+    
+    .about, .contact {
+        p {
+            line-height: 2em;
+            margin: auto;
+            padding: 1em 5em; 
+        }
+        img {
+            margin: auto;
+            max-width: 80%;
+            padding-right: 2em;
+        }       
+    }
 }
-
-//    section {
-//        h4 {
-//            font-size: 1.2em;
-//            margin: .8em 2em .3em;
-//        }
-//        h5 {
-//            margin: 1em 4.5em;
-//        }
-//        h6 {
-//            font-size: 1.2em;
-//            margin: .5em 5em;
-//        }
-//        p {
-//            font-size: 1.2em;
-//            padding: .5em 3em;
-//        }
-//        ul {
-//            li {
-//                margin-left: 5em;
-//            }
-//        }
-//    }

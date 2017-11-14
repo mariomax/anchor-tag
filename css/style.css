@@ -104,7 +104,7 @@ nav .expand {
 nav .tablet-desk-menu {
   display: none;
 }
-/* Initial header style and specific mobile header styling. */
+/* Initial header and specific mobile header styling. */
 header h1 {
   color: #ffffff;
   font-family: 'Fjalla One', sans-serif;
@@ -145,6 +145,20 @@ header button a {
   font-weight: 600;
   text-decoration: none;
 }
+header .errors {
+  background-image: none;
+}
+header .errors h2,
+header .errors h3 {
+  color: #ff1b04;
+  margin: auto;
+  padding: .5em 1em;
+}
+header .errors img {
+  max-width: 70%;
+  margin: auto;
+  padding: 1.5em;
+}
 /* Removing the tablet & desktop header. */
 .fullHeader {
   display: none;
@@ -166,7 +180,7 @@ h3 {
   text-align: center;
 }
 section h4 {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Noto Serif', serif;
   margin: .5em 1em .3em;
   padding: 1em;
 }
@@ -180,6 +194,9 @@ section h6 {
   font-family: 'Noto Serif', serif;
   font-size: .8em;
   margin: .5em 3em;
+}
+section ul {
+  clear: both;
 }
 section ul li {
   font-family: 'Noto Serif', serif;
@@ -203,6 +220,18 @@ section p {
   margin: 1em auto;
   max-width: 75%;
 }
+.process div .fa {
+  color: #1a5481;
+  display: block;
+  font-size: 2em;
+  float: left;
+  padding-left: .8em;
+  margin-top: .5em;
+}
+.process h3 {
+  padding-left: 4em;
+  text-align: left;
+}
 form {
   color: #1a5481;
   font-family: 'Noto Serif', serif;
@@ -219,7 +248,7 @@ form label {
   padding: .5em;
 }
 form input {
-  color: #ff1b04;
+  color: #000000;
   font-family: 'Source Code Pro', monospace;
   font-weight: 500;
 }
@@ -230,6 +259,9 @@ form input[type=text] {
   width: 95%;
 }
 form input[type=submit] {
+  color: #ff1b04;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
   margin: .5em;
 }
 form textarea {
@@ -354,19 +386,27 @@ footer p {
     font-family: 'Source Code Pro', monospace;
     margin: auto;
   }
+  header .errors {
+    background-image: none;
+  }
+  header .errors h2,
+  header .errors h3 {
+    color: #ffffff;
+    margin: auto;
+    padding: 1.5em;
+  }
+  header .errors img {
+    max-width: 25%;
+  }
   section h3 {
     font-weight: 500;
     font-size: 1.5em;
-    padding: 0 2em;
+    padding: 0 3em;
     text-align: center;
   }
   section h4 {
     color: #1a5481;
-    font-family: 'Fjalla One', sans-serif;
-  }
-  section p {
-    padding: .5em 2em;
-    line-height: 1.5em;
+    font-family: 'Noto Serif', serif;
   }
   section ul li {
     font-family: 'Noto Serif', serif;
@@ -380,12 +420,24 @@ footer p {
     padding: .5em;
   }
   .work img {
-    border-width: 30px 5px 50px 5px;
+    border-width: 40px 8px 65px 8px;
   }
   .work p {
     font-size: .9em;
     margin-bottom: 2em;
     padding: 0 4em;
     text-align: center;
+  }
+  .about p,
+  .contact p {
+    line-height: 2em;
+    margin: auto;
+    padding: 1em 5em;
+  }
+  .about img,
+  .contact img {
+    margin: auto;
+    max-width: 80%;
+    padding-right: 2em;
   }
 }
