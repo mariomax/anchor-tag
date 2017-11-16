@@ -458,4 +458,31 @@ footer {
             padding-right: 2em;
         }       
     }
+    
+    .process {
+
+        div {
+                    border: 3px solid @color2;
+        border-radius: .8em;
+        padding-bottom: 3em;
+            .fa {
+                margin-top: .8em;
+            }
+        }    
+        ul {
+            // background-color: @color3;
+            // border-left: 3px solid @color2;
+            // border-radius: .8em;
+            margin: 0 2em; // was margin-left:
+            padding: 1.8em 0;
+            li {
+                line-height: 2.5em;
+            }
+        }
+        ul li:before {
+            color: @color2;
+		      content: "\00BB \0020";
+            margin-left: -1.5em;
+	   }
+    }
 }

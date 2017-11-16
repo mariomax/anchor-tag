@@ -440,4 +440,24 @@ footer p {
     max-width: 80%;
     padding-right: 2em;
   }
+  .process div {
+    border: 3px solid #ff1b04;
+    border-radius: .8em;
+    padding-bottom: 3em;
+  }
+  .process div .fa {
+    margin-top: .8em;
+  }
+  .process ul {
+    margin: 0 2em;
+    padding: 1.8em 0;
+  }
+  .process ul li {
+    line-height: 2.5em;
+  }
+  .process ul li:before {
+    color: #ff1b04;
+    content: "\00BB \0020";
+    margin-left: -1.5em;
+  }
 }

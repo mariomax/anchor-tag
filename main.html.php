@@ -24,7 +24,6 @@
 
       gtag('config', 'UA-97175852-2');
     </script>
-
     
     <!-- Stylesheets in the css folder. -->
     <link href="css/reset.css" rel="stylesheet">
@@ -39,12 +38,10 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
             integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
             crossorigin="anonymous"></script>
-
-    <!-- Include the 64 x 64 px favicon for the browser tab. -->
-    <!-- <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">-->
+        
+    <!-- JavaScript from the js folder. -->
+    <script src="js/scripts.js" type="text/javascript"></script>
     
-    <script src='https://www.google.com/recaptcha/api.js'></script>
-    <!-- Invisible reCAPTCHA script -->
 </head>
 
 <body>
@@ -93,8 +90,8 @@
         <!-- End of about section in main content. -->
         
         <!-- Process content section. -->
-        <section class="process section group">
-            <h2 id="process">The Mission &amp; The Process:</h2>
+        <section class="process section group"  id="process">
+            <h2>The Mission &amp; The Process:</h2>
             
             <?php include 'process/index.php'; ?> 
             
@@ -104,16 +101,18 @@
         <!-- Contact (PHP form) section. -->
         <section class="contact section group" id="contact">
             <h2>Contact Anchor Tag Design:</h2>
-            
-            <div class="col span_7_of_12">
-                <h4>Thanks for taking the time to make contact.</h4>
-                <p>Let's get your project started. Use the contact form to send your name and email securely to a database. The form also sends a notification via email - which gets checked regularly. Drop a note in the comments section describing what your project may entail and I'll get back to you shortly. There's also a short version of a client questionnaire on another page if you're really interested in taking the next step. I'm looking forward to working with you. Thanks again!</p>
-                <h4>Cheers, Mario</h4>
-            </div>
-            <div class="col span_5_of_12">
+                <div class="col span_5_of_12">
                 <!-- Contact form control page from its folder. -->
-                <?php include 'contact/index.php'; ?>
+                    
+                    <?php include 'contact/index.php'; ?>
+                    
+                </div>
+            <div class="col span_7_of_12">
+                
+                <?php include 'contact_text/index.php'; ?>
+                
             </div>
+
         </section>
         
         <!-- Footer from the includes folder. -->
