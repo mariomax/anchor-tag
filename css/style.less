@@ -35,8 +35,8 @@ nav {
         top: 64%;
         padding-right: 8px;
         margin-top: -0.50em;
-        line-height: 1.2;
-        font-size: 18px;
+        line-height: 1.4;
+        font-size: 20px;
         font-weight: 200;
         vertical-align: middle;
         z-index: 99;
@@ -64,12 +64,14 @@ nav {
         display: block !important;
     }
     /* This takes the larger menus out of play until min-width: 481px; */
-        .tablet-desk-menu {
+    .tablet-desk-menu {
         display: none;
     }
 }
 
+
 /* Initial header and specific mobile header styling. */
+
 header {
     h1 {
         color: @color1;
@@ -79,7 +81,7 @@ header {
     img {
         display: block;
         margin: auto;
-        padding-top: .8em;
+        padding: 2.5em 0;
         width: 60%;
     }
     h3 {
@@ -94,7 +96,7 @@ header {
         text-align: center;
     }
     .mobile_hero {
-        background-image: url(../images/mobile_hero.jpg);
+        background-image: url(../images/mobile_heroB.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
@@ -108,12 +110,12 @@ header {
             font-family: @taglineFont;
             font-size: 1.3em;
             font-weight: 600;
-            text-decoration: none; 
-        }   
+            text-decoration: none;
+        }
     }
-    
     .errors {
-        h2,h3 {
+        h2,
+        h3 {
             color: @color2;
             margin: auto;
             padding: .5em 1em;
@@ -127,32 +129,37 @@ header {
     }
 }
 
+
 /* Removing the tablet & desktop header. */
 
 .fullHeader {
     display: none;
 }
 
+
 /* Stying for Main and Section content. */
 
 main {
     background-color: @color1;
 }
-    h2 {
+
+h2 {
     color: @color5;
     font-family: @headlineFont;
     line-height: 1.3em;
-    text-align: center;  
+    text-align: center;
 }
-    h3 {
-        color: @color4;
-        font-family: @headlineFont;
-        line-height: 1.5em;
-        text-align: center;
-    }
-section {
 
+h3 {
+    color: @color4;
+    font-family: @headlineFont;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+section {
     h4 {
+        color: @color4;
         font-family: @bodyFont;
         margin: .5em 1em .3em;
         padding: 1em;
@@ -173,7 +180,7 @@ section {
         li {
             font-family: @bodyFont;
             line-height: 1.5em;
-            list-style-type: none;            
+            list-style-type: none;
             margin-left: 2.5em;
         }
     }
@@ -182,8 +189,8 @@ section {
         display: block;
         font-family: @bodyFont;
         line-height: 1.5;
-        padding: 0 1.5em 1.2em;
         margin: auto;
+        padding: 0 1.5em 1.2em;   
     }
 }
 
@@ -191,10 +198,13 @@ section {
     img {
         border: solid @color5;
         border-radius: 15px;
-        border-width: 20px 5px 30px 5px;
+        border-width: 30px 5px;
         display: block;
         margin: 1em auto;
         max-width: 75%;
+    }
+    p {
+        text-align: center;
     }
 }
 
@@ -205,8 +215,8 @@ section {
             display: block;
             font-size: 2em;
             float: left;
-            padding-left: .8em;
             margin-top: .5em;
+            padding-left: .5em;
         }
     }
     h3 {
@@ -284,16 +294,19 @@ footer {
 }
 
 
-
 /* ########################################################### TABLET CSS! */
+
+
 /* Tablet CSS code and up */
+
 @media only screen and (min-width: 481px) {
-    
-/* This can get taken care of after the desktop version is good to go... */
-   
+    /* This can get taken care of after the desktop version is good to go... */
 }
-  
+
+
 /* ########################################################### DESKTOP CSS! */
+
+
 /* Desktop CSS code and up */
 
 @media only screen and (min-width: 1025px) {
@@ -337,21 +350,17 @@ footer {
                 }
             }
         }
-    }    
-    
-
+    }
     /* Removing the mobile header. */
     .mobileHeader {
         display: none;
     }
-    
     /* Restoring the desktop header. */
     .fullHeader {
         display: block;
     }
-    
     body {
-        background-image: url(../images/temp_hero_2.jpg);
+        background-image: url(../images/temp_heroB.jpg);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: 0 -30px;
@@ -361,7 +370,6 @@ footer {
     header {
         height: 650px;
         padding: 5em;
-        
         h1 {
             color: @color1;
             font-family: @headlineFont;
@@ -370,53 +378,49 @@ footer {
             padding: 2em 0 1em;
             text-align: center;
         }
-        
         h2 {
             color: @color1;
             font-weight: 500;
             text-align: center;
         }
-        
         h3 {
             color: @color1;
             font-family: @headlineFont;
             font-weight: 500;
             text-align: center;
         }
-        
         button {
             display: block;
             font-family: @taglineFont;
             margin: auto;
         }
-        
         .errors {
-            h2,h3 {
+            h2,
+            h3 {
                 color: @color1;
                 margin: auto;
                 padding: 1.5em;
             }
-            
             background-image: none;
             img {
                 max-width: 25%;
             }
         }
     }
-    
     section {
+        h2 {
+            padding-top: 1.5em;
+        }
         h3 {
             font-weight: 500;
             font-size: 1.5em;
             padding: 0 3em;
             text-align: center;
         }
-        
         h4 {
             color: @color4;
             font-family: @bodyFont;
         }
-
         ul {
             li {
                 font-family: @bodyFont;
@@ -424,16 +428,13 @@ footer {
                 margin-left: 3em;
             }
         }
-        
     }
-    
     form {
         text-align: left;
         label {
             padding: .5em;
         }
     }
-    
     .work {
         img {
             border-width: 40px 8px 65px 8px;
@@ -445,44 +446,34 @@ footer {
             text-align: center;
         }
     }
-    
-    .about, .contact {
+    .about,
+    .contact {
         p {
             line-height: 2em;
             margin: auto;
-            padding: 1em 5em; 
+            padding: 1em 5em;
         }
         img {
             margin: auto;
-            max-width: 80%;
-            padding-right: 2em;
-        }       
+            max-width: 90%;
+        }
     }
-    
     .process {
-
         div {
-                    border: 3px solid @color2;
-        border-radius: .8em;
-        padding-bottom: 3em;
             .fa {
                 margin-top: .8em;
+                padding-left: 1em;
             }
-        }    
+        }
         ul {
-            // background-color: @color3;
-            // border-left: 3px solid @color2;
-            // border-radius: .8em;
-            margin: 0 2em; // was margin-left:
-            padding: 1.8em 0;
             li {
                 line-height: 2.5em;
             }
         }
         ul li:before {
             color: @color2;
-		      content: "\00BB \0020";
+            content: "\00BB \0020";
             margin-left: -1.5em;
-	   }
+        }
     }
 }

@@ -15,7 +15,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#process">Process</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#galleries">Galleries</a></li>
+<!-- Coming soon... <li><a href="#galleries">Galleries</a></li>-->
             </ul>
         </div>
     </div>
@@ -31,7 +31,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#process">Process</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#galleries">Galleries</a></li>
+<!-- Coming soon... <li><a href="#galleries">Galleries</a></li>-->
             </ul>
         </div>
     </section>

@@ -75,8 +75,8 @@ nav .menu-btn div {
   top: 64%;
   padding-right: 8px;
   margin-top: -0.5em;
-  line-height: 1.2;
-  font-size: 18px;
+  line-height: 1.4;
+  font-size: 20px;
   font-weight: 200;
   vertical-align: middle;
   z-index: 99;
@@ -113,7 +113,7 @@ header h1 {
 header img {
   display: block;
   margin: auto;
-  padding-top: .8em;
+  padding: 2.5em 0;
   width: 60%;
 }
 header h3 {
@@ -128,7 +128,7 @@ header .tagLine {
   text-align: center;
 }
 header .mobile_hero {
-  background-image: url(../images/mobile_hero.jpg);
+  background-image: url(../images/mobile_heroB.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -180,6 +180,7 @@ h3 {
   text-align: center;
 }
 section h4 {
+  color: #1a5481;
   font-family: 'Noto Serif', serif;
   margin: .5em 1em .3em;
   padding: 1em;
@@ -209,24 +210,27 @@ section p {
   display: block;
   font-family: 'Noto Serif', serif;
   line-height: 1.5;
-  padding: 0 1.5em 1.2em;
   margin: auto;
+  padding: 0 1.5em 1.2em;
 }
 .work img {
   border: solid #000000;
   border-radius: 15px;
-  border-width: 20px 5px 30px 5px;
+  border-width: 30px 5px;
   display: block;
   margin: 1em auto;
   max-width: 75%;
+}
+.work p {
+  text-align: center;
 }
 .process div .fa {
   color: #1a5481;
   display: block;
   font-size: 2em;
   float: left;
-  padding-left: .8em;
   margin-top: .5em;
+  padding-left: .5em;
 }
 .process h3 {
   padding-left: 4em;
@@ -351,7 +355,7 @@ footer p {
     display: block;
   }
   body {
-    background-image: url(../images/temp_hero_2.jpg);
+    background-image: url(../images/temp_heroB.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 -30px;
@@ -398,6 +402,9 @@ footer p {
   header .errors img {
     max-width: 25%;
   }
+  section h2 {
+    padding-top: 1.5em;
+  }
   section h3 {
     font-weight: 500;
     font-size: 1.5em;
@@ -437,20 +444,11 @@ footer p {
   .about img,
   .contact img {
     margin: auto;
-    max-width: 80%;
-    padding-right: 2em;
-  }
-  .process div {
-    border: 3px solid #ff1b04;
-    border-radius: .8em;
-    padding-bottom: 3em;
+    max-width: 90%;
   }
   .process div .fa {
     margin-top: .8em;
-  }
-  .process ul {
-    margin: 0 2em;
-    padding: 1.8em 0;
+    padding-left: 1em;
   }
   .process ul li {
     line-height: 2.5em;

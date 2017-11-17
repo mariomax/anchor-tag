@@ -45,10 +45,12 @@
 </head>
 
 <body>
-
+    <!-- Only one ID per page. Here's the footer's jump link back up. -->
+    <div id="header"></div>
+    
     <!-- Navigation from the includes folder. -->
     <?php include 'includes/nav.inc.php'; ?>
-
+    
     <!-- Mobile header from the includes folder. -->
     <div class="mobileHeader">
         <?php include 'includes/mobile_header.inc.php'; ?>
@@ -82,7 +84,7 @@
             
         <!-- About content section. -->
         <section class="about section group" id="about">
-            <h2>About the Work:</h2>
+            <h2>The Initial Concept:</h2>
             
             <?php include 'about/index.php'; ?>
             
