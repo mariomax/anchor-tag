@@ -1,0 +1,349 @@
+/*
+File Name: style.less
+Date: 08/28/16
+Programmer: Mario Lopriore
+*/
+
+@import 'palette.less';
+@import 'mixins.less';
+
+/* MIXINS FOR STYLESHEET */
+
+.headerFontStyle(@fontColor; @headFont; @fontSize) {
+    color: @fontColor;
+    font-family: @headFont;
+    font-size: @fontSize;
+}
+
+.paraFont(@paraFont; @fontSize) {
+    font-family: @paraFont;
+    font-size: @fontSize;
+    margin: 0 .5em 0 .5em;
+    padding: @padSize * .6;
+}
+
+.borderStyle(@borderB; @borderL; @borderR; @borderT) {
+    border-bottom: @borderB;
+    border-left: @borderL;
+    border-right: @borderR;
+    border-top: @borderT;
+}
+
+.figMargin(@marginB; @marginR; @marginL; @marginT) {
+    margin-bottom: @marginB;
+    margin-right: @marginR;
+    margin-left: @marginL;
+    margin-top: @marginT;
+}
+
+/* MOBILE FIRST STYLESHEET */
+
+header {
+    background-image: url(../images/coyote_golf_course.jpg);
+    background-size: cover;
+    opacity: 0.9;
+}
+
+h1 {
+    .headerFontStyle(@lightColor; @headFont; @fontSize * 2);
+    font-weight: @fontWeight * 6;
+    padding-bottom: @padSize * 3.7;
+    padding-top: @padSize * .6;
+    text-align: center;
+}
+
+nav a {
+    .headerFontStyle(@color4; @headFont; @fontSize * 1.4);
+    .borderStyle(@borderB; @borderR; @borderL; @borderT);
+    background-color: @color1;
+    background-image: linear-gradient(to bottom, @color2, 10%, @color1, 90%, @color2);
+    border-color: @color2;
+    float: left;
+    margin: 0;
+    padding: @padSize * .5;
+    text-align: center;
+    text-decoration: none;
+    width: 33.33%;
+}
+
+a:visited {
+    color: @color5;
+}
+
+main {
+    clear: both;
+    
+    p {
+        .paraFont(@paraFont; @fontSize);
+        padding-bottom: @padSize;
+        padding-left: @padSize * 1.1;
+        padding-right: @padSize * 1.1;
+    }
+    
+    a {
+        .headerFontStyle(@color4; @headFont; @fontSize * 1.3);
+        display: block;
+        text-align: center;
+        text-decoration: none;
+    }
+}
+
+blockquote p {
+    .paraFont(@paraFont; @fontSize);
+    color: @color3;
+    font-weight: @fontWeight * 6;
+    line-height: @lineHeight * 1.2;
+    margin: 0 .5em 0 .5em;
+    padding: @padSize * .7;
+}
+
+h2 {
+    .headerFontStyle(@color1; @headFont; @fontSize * 1.1);
+    .borderStyle(@borderB; @borderR; @borderL; @borderT);
+    background-color: @color4;
+    background-image: linear-gradient(to bottom, @color2, 5%, @color4, 95%, @color2);
+    border-color: @color2;
+    font-weight: @fontWeight * 5;
+    line-height: @lineHeight * 1.2;
+    padding: @padSize * .4;
+    text-align: center;
+}
+
+h3 {
+    .headerFontStyle(@color2; @headFont; @fontSize);
+    display: block;
+    text-align: center;
+}
+
+figure {
+    .figMargin(@marginB; @marginR; @marginL; @marginT);
+    max-width: 500px;
+    width: 80%;
+    
+    figcaption {
+       font-family: @footFont;
+       font-size: @fontSize;
+       text-align: center;
+    }
+}
+
+.zBox {
+    background-color: @color2;
+    background-image: linear-gradient(to bottom, @color1, 10%, @color2);
+    color: @lightColor;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: @padSize;
+    text-align: center;
+}
+
+.bottomNav a {
+    .headerFontStyle(@color4; @headFont; @fontSize);
+    .borderStyle(@borderB; @borderR; @borderL; @borderT);
+    background-color: @color1;
+    background-image: linear-gradient(to bottom, @color2, 10%, @color1, 90%, @color2);
+    border-color: @color2;
+    float: left;
+    margin: 0;
+    padding: @padSize * .5;
+    text-align: center;
+    text-decoration: none;
+    width: 33.33%;
+}
+  
+footer {
+    .headerFontStyle(@lightColor; @footFont; @fontSize * .9);
+    background-color: @color3;
+    clear: both;
+    line-height: @lineHeight * 1.1;
+    padding: @padSize * .5;
+    text-align: center;
+    
+        a {
+        .headerFontStyle(@lightColor; @footFont; @fontSize * .9);
+    }
+    
+        li {
+            display: inline-block;
+            padding-left: .3em;
+    }
+    
+}
+
+footer a:visited {
+    .headerFontStyle(@color4; @footFont; @fontSize * .9);
+}
+
+/* TABLET STYLESHEET */
+
+@media only screen and (min-width: 481px) {
+
+    header {
+        background-position: center top;
+        background-repeat:  no-repeat;
+        background-size: cover;
+    }
+
+    h1 {
+        .headerFontStyle(@lightColor; @headFont; @fontSize * 4);
+        font-weight: @fontWeight * 7;
+        padding-bottom: @padSize * 4.5;
+        padding-top: @padSize * 1.2;
+        text-align: center;
+    }
+
+    nav a {
+        .headerFontStyle(@color4; @headFont; @fontSize * 1.8);
+        font-weight: @fontWeight * 5;
+    }
+    
+    main {
+        a {
+            font-weight: @fontWeight * 6;
+        }
+        
+        p {
+        .paraFont(@paraFont; @fontSize * 1.2);
+        line-height: @lineHeight * 1.1;
+        margin: 0 2em 0 2em;
+        padding: @padSize * 1.2;
+        }
+    }
+    
+    blockquote p {
+        .paraFont(@paraFont; @fontSize * 1.1);
+        color: @color3;
+        font-weight: @fontWeight * 6;
+        line-height: @lineHeight * 1.2;
+        margin: 0 1.5em .5em 1.5em;
+        padding: @padSize * .8;
+    }
+    
+    h2 {
+        .headerFontStyle(@color1; @headFont; @fontSize * 1.3);
+        font-weight: @fontWeight * 5;
+    }
+    
+     h3 {
+       .headerFontStyle(@color2; @headFont; @fontSize * 2);
+        display: block;
+        text-align: center;
+    }
+    
+    figure { 
+        
+        figcaption {
+            font-size: @fontSize * 1.1;
+        }
+    }
+    
+    .zBox {
+        padding: @padSize * 1.5;
+    }
+
+    .bottomNav a {
+        .headerFontStyle(@color4; @headFont; @fontSize * 1.3);    
+    }
+    
+    footer {
+        .headerFontStyle(@lightColor; @footFont; @fontSize * 1.1);
+        line-height: @lineHeight * 1.3;
+        padding: @padSize * .7;
+    }
+
+}
+
+/* DESKTOP STYLESHEET */
+
+@media only screen and (min-width: 1025px) {
+    
+    header {
+        background-position: 0 -125px;
+        background-size: 100% auto;
+    }
+
+    h1 {
+        .headerFontStyle(@color1; @headFont; @fontSize * 7);
+        font-weight: @fontWeight * 7;
+        padding-bottom: @padSize * 4;
+        padding-top: @padSize * .25;
+    }
+
+    nav a {
+        .headerFontStyle(@color4; @headFont; @fontSize * 1.8);
+        background-image: linear-gradient(to bottom, @color2, 15%, @color1, 85%, @color2);
+        padding: @padSize * .7;
+    }
+    
+    main { 
+        p {
+        .paraFont(@paraFont; @fontSize * 1.2);
+        margin-left: 10%;
+        margin-right: 10%;
+        }
+    }
+    
+    a {
+        .headerFontStyle(@color4; @headFont; @fontSize * 1.3);
+        display: block;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    h2 {
+        .headerFontStyle(@color1; @headFont; @fontSize * 1.3);
+        margin-bottom: 1em;
+        padding: @padSize * .6;
+    }
+    
+    h3 {
+       .headerFontStyle(@color2; @headFont; @fontSize * 2);
+        display: block;
+        text-align: center;
+    }
+
+    blockquote p {
+        .paraFont(@paraFont; @fontSize * 1.5);
+        line-height: @lineHeight * 1.1;
+        margin: 0 8% 0 8%;
+        padding: @padSize;
+    }
+    
+    .indexPic {
+        float: right;
+        margin-right: 10%;
+        max-width: 450px;
+    }
+    
+    figcaption {
+       font-size: @fontSize * 2;
+       line-height: @lineHeight * 1.1;
+    }
+    
+    .bottomNav a {
+        .headerFontStyle(@color4; @headFont; @fontSize * 1.3);
+        margin-top: 2em;
+        padding: @padSize * .7;
+    }
+    
+    footer {
+        .headerFontStyle(@lightColor; @footFont; @fontSize * 1.1);
+        background-color: @color3;
+        clear: both;
+        line-height: @lineHeight * 1.1;
+        padding: @padSize * .5;
+        text-align: center;
+
+            a {
+            .headerFontStyle(@lightColor; @footFont; @fontSize * 1.1);
+        }
+
+            li {
+                display: inline-block;
+                padding-left: .3em;
+        }
+
+    }
+
+}

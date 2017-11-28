@@ -1,0 +1,26 @@
+/* CSS helper file */
+
+* {
+    box-sizing: border-box;
+}
+/* Ignores  box sizing rules when adding padding. */
+
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Default font smoothing is terrible and makes fonts too thick. This is better. Thanks, Juan Maldonado! */
+}
+
+img {
+    display: block;
+}
+
+img, embed {
+    max-width: 100%;
+    /* Images and embedded content can't be larger than the box they are in. Very responsive. */
+}
+
+a {
+    outline: none;
+    /* No more ugly dotted outlines on active links. */
+}

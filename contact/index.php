@@ -73,19 +73,19 @@ if (isset($_POST['c_name'])) {
     $mail->SMTPAuth = true;
 
 //Username to use for SMTP authentication - use full email address for gmail
-    $mail->Username = "anchortagdesign@gmail.com";
+    $mail->Username = "XXXXXXXXXX@gmail.com";
 
 //Password to use for SMTP authentication
-    $mail->Password = "atDesign_17";
+    $mail->Password = "XXXXXXXXXX";
 
 //Set who the message is to be sent from
-    $mail->setFrom('anchortagdesign@gmail.com', 'ATD Forms'); // This said 'Form Catcher' - the only reference on this page.
+    $mail->setFrom('XXXXXXXXXX@gmail.com', 'ATD Forms'); // This said 'Form Catcher' - the only reference on this page.
 
 //Set an alternative reply-to address
     $mail->addReplyTo($c_email, $c_name);
 
 //Set who the message is to be sent to
-    $mail->addAddress('mariojames211@gmail.com', 'Mario Lopriore');
+    $mail->addAddress('XXXXXXXXXX@gmail.com', 'XXXXX XXXXXXXX');
 
 //Set the subject line
     $mail->Subject = 'User generated email from anchortagdesign.com';
@@ -121,5 +121,3 @@ if (isset($_POST['c_name'])) {
 } else {
     include 'contact.php';
 }
-
-// Google reCAPTCHA site key: 6Le9FDgUAAAAAF0drTqW9eeha60tvpbZPQNuPNit

@@ -51,6 +51,10 @@ File Name: palette.css
 Date: 10/23/17
 Programmer: Mario Lopriore
 */
+body {
+  margin: auto;
+  max-width: 1500px;
+}
 /* Styling the navigation */
 nav {
   background-color: #000000;
@@ -182,8 +186,7 @@ h3 {
 section h4 {
   color: #1a5481;
   font-family: 'Noto Serif', serif;
-  margin: .5em 1em .3em;
-  padding: 1em;
+  padding: 0 .8em;
 }
 section h5 {
   font-family: 'Noto Serif', serif;
@@ -196,22 +199,19 @@ section h6 {
   font-size: .8em;
   margin: .5em 3em;
 }
-section ul {
-  clear: both;
-}
-section ul li {
-  font-family: 'Noto Serif', serif;
-  line-height: 1.5em;
-  list-style-type: none;
-  margin-left: 2.5em;
-}
 section p {
   color: #000000;
   display: block;
   font-family: 'Noto Serif', serif;
   line-height: 1.5;
-  margin: auto;
-  padding: 0 1.5em 1.2em;
+  padding: 1.5em;
+}
+.work a {
+  color: #1a5481;
+  text-decoration: none;
+}
+.work a:hover {
+  color: #ff1b04;
 }
 .work img {
   border: solid #000000;
@@ -222,15 +222,47 @@ section p {
   max-width: 75%;
 }
 .work p {
-  text-align: center;
+  padding: .3em 1em 1.3em;
+}
+.about div .fa {
+  color: #1a5481;
+  display: block;
+  float: left;
+  font-size: 2em;
+  margin-top: .5em;
+  padding-left: .7em;
+}
+.about h3 {
+  padding-left: 4em;
+  text-align: left;
+}
+.about p {
+  clear: both;
+  line-height: 2em;
+  padding: .3em 1em 1.3em;
 }
 .process div .fa {
   color: #1a5481;
   display: block;
-  font-size: 2em;
   float: left;
+  font-size: 2em;
   margin-top: .5em;
-  padding-left: .5em;
+  padding-left: .7em;
+}
+.process ul {
+  clear: both;
+  margin-bottom: .7em;
+}
+.process ul li {
+  font-family: 'Noto Serif', serif;
+  line-height: 1.5em;
+  list-style-type: none;
+  margin-left: 3em;
+}
+.process ul li:before {
+  color: #ff1b04;
+  content: "\00BB \0020";
+  margin-left: -1.5em;
 }
 .process h3 {
   padding-left: 4em;
@@ -278,6 +310,13 @@ form textarea {
 .inputArea {
   margin: 1em 0;
 }
+.contact img {
+  margin: auto;
+  max-width: 80%;
+}
+.contact p {
+  line-height: 2;
+}
 footer {
   background-color: #000000;
   color: #ffffff;
@@ -315,13 +354,16 @@ footer p {
   }
   nav {
     margin-top: 0;
+    position: fixed;
+    max-width: 1500px;
+    width: 100%;
   }
   nav .tablet-desk-menu {
     display: block;
   }
   nav .tablet-desk-menu img {
-    margin: 0;
-    max-width: 35%;
+    margin: auto;
+    max-width: 70%;
     padding-left: .8em;
   }
   nav .tablet-desk-menu ul {
@@ -354,17 +396,13 @@ footer p {
   .fullHeader {
     display: block;
   }
-  body {
-    background-image: url(../images/temp_heroB.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0 -30px;
-    width: 100%;
-  }
   /* Header adapted for tablet */
   header {
     height: 650px;
     padding: 5em;
+  }
+  header img {
+    max-width: 25%;
   }
   header h1 {
     color: #ffffff;
@@ -376,7 +414,7 @@ footer p {
   }
   header h2 {
     color: #ffffff;
-    font-weight: 500;
+    font-weight: 600;
     text-align: center;
   }
   header h3 {
@@ -402,60 +440,92 @@ footer p {
   header .errors img {
     max-width: 25%;
   }
+  .parallax {
+    background-image: url(../images/temp_heroB.jpg);
+    height: 700px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
   section h2 {
-    padding-top: 1.5em;
+    margin-top: 60px;
+    padding-top: 40px;
   }
   section h3 {
     font-weight: 500;
     font-size: 1.5em;
-    padding: 0 3em;
     text-align: center;
   }
   section h4 {
     color: #1a5481;
     font-family: 'Noto Serif', serif;
+    font-size: 1.3em;
   }
   section ul li {
     font-family: 'Noto Serif', serif;
     line-height: 1.8em;
     margin-left: 3em;
   }
-  form {
-    text-align: left;
-  }
-  form label {
-    padding: .5em;
+  .work {
+    margin: 0 3em;
   }
   .work img {
     border-width: 40px 8px 65px 8px;
+    margin: 1em auto 3em;
   }
   .work p {
     font-size: .9em;
-    margin-bottom: 2em;
-    padding: 0 4em;
-    text-align: center;
+    padding: .5em 0;
+    text-align: left;
   }
-  .about p,
-  .contact p {
+  .about {
+    margin-left: 8em;
+    margin-right: 8em;
+  }
+  .about div .fa {
+    margin-top: .8em;
+  }
+  .about h3 {
+    padding-left: 3em;
+  }
+  .about p {
     line-height: 2em;
-    margin: auto;
-    padding: 1em 5em;
   }
-  .about img,
-  .contact img {
-    margin: auto;
-    max-width: 90%;
+  .process {
+    margin: 0 1em;
   }
   .process div .fa {
     margin-top: .8em;
     padding-left: 1em;
   }
+  .process h3 {
+    padding-left: 3em;
+  }
   .process ul li {
+    font-size: .9em;
     line-height: 2.5em;
+    margin-left: 2.5em;
   }
   .process ul li:before {
     color: #ff1b04;
     content: "\00BB \0020";
     margin-left: -1.5em;
+  }
+  form {
+    margin-left: 3em;
+    padding: 2em 1em;
+    text-align: left;
+  }
+  form label {
+    padding: .5em;
+  }
+  .contact p {
+    line-height: 2em;
+    margin: auto;
+    padding: 1em;
+  }
+  .contact img {
+    margin: auto;
+    max-width: 95%;
   }
 }

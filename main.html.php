@@ -7,6 +7,7 @@
     <meta name="author" content="Mario Lopriore" />
     <meta name="description" content="Anchor Tag Design: Websites | Photography | Graphic Design" />
     <meta name="keywords" content="HTML5, CSS/LESS, PHP, JavaScript, GitHub" />
+    <meta property='og:image' content='http://www.anchortagdesign.com/atd_og_linkedIn.png'/>
     
     <title>Anchor Tag Design</title>
 
@@ -34,10 +35,8 @@
     <!-- Font Awesome! -->
     <script src="https://use.fontawesome.com/ef441b60f1.js"></script>
     
-    <!-- Slim minified jQuery script. -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
-            crossorigin="anonymous"></script>
+    <!-- Google's CDN jQuery script. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         
     <!-- JavaScript from the js folder. -->
     <script src="js/scripts.js" type="text/javascript"></script>
@@ -49,7 +48,9 @@
     <div id="header"></div>
     
     <!-- Navigation from the includes folder. -->
+    <div class="nav">
     <?php include 'includes/nav.inc.php'; ?>
+    </div>
     
     <!-- Mobile header from the includes folder. -->
     <div class="mobileHeader">
@@ -70,10 +71,16 @@
             <?php foreach ($works as $row): ?>
             <div class="col span_4_of_12">
 
-                <h3><?php echo htmlspecialchars($row['title'], ENT_QUOTES, 'UTF-8'); ?></h3>
-                <img src="<?php echo ($row['thumb']); ?>" alt="thumbnail of portfolio image">
-                <p><?php echo htmlspecialchars($row['stats'], ENT_QUOTES, 'UTF-8'); ?></p>
-               
+                <h3><?php echo $row['title']; ?></h3>
+                                
+                <div class="col span_7_of_12">
+                    <?php echo ($row['thumb']); ?>
+                </div>
+                
+                <div class="col span_5_of_12">
+                    <p><?php echo htmlspecialchars($row['stats'], ENT_QUOTES, 'UTF-8'); ?></p>
+                </div>
+                
             </div>
              <?php endforeach; ?>
             
@@ -84,7 +91,7 @@
             
         <!-- About content section. -->
         <section class="about section group" id="about">
-            <h2>The Initial Concept:</h2>
+            <h2>About Web Design:</h2>
             
             <?php include 'about/index.php'; ?>
             
@@ -120,16 +127,6 @@
         <!-- Footer from the includes folder. -->
         <?php include 'includes/footer.inc.php'; ?>
     </main>
-
-    <!-- jQuery hamburger menu control -->
-    <!-- This version closes with a click. -->
-    <script type="text/javascript">
-        jQuery(function($) {
-            $('.menu-btn').click(function() {
-                $('.responsive-menu').toggleClass('expand')
-            })
-        })
-    </script>
 
 </body>
 

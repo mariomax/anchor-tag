@@ -3,7 +3,7 @@ include '../includes/db.inc.php';
 
 try
 {
-  $sql = 'SELECT greeting, paragraph, sign_off FROM contact_section';
+  $sql = 'SELECT greeting, paragraph, image FROM contact_section';
   $result = $pdo->query($sql);
 }
 catch (PDOException $e)
@@ -18,7 +18,7 @@ foreach ($result as $row)
     $contacts[] = array(
         'greeting' => $row['greeting'],
         'paragraph' => $row['paragraph'],
-        'sign_off' => $row['sign_off']
+        'image' => $row['image']
     );
 }
 

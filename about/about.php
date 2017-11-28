@@ -4,11 +4,10 @@
     <h2>About the Work:</h2> 
 -->
 
-    <?php foreach ($about as $row): ?>
-        <div class="col span_9_of_12">
-            <p><?php echo $row['content']; ?></p>
-        </div>
-        <div class="col span_3_of_12">
-            <img src="<?php echo ($row['image']); ?>" alt="image and hello world">
-        </div>
-    <?php endforeach; ?>
+<?php foreach ($about as $row): ?>
+    <div class="col span_12_of_12">
+        <?php echo $row['fa_icon']; ?>
+        <h3><?php echo $row['title']; ?></h3>
+        <p><?php echo $row['content']; ?></p>
+    </div>
+<?php endforeach; ?>

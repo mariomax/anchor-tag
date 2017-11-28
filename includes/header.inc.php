@@ -1,8 +1,9 @@
-<header>
+<header class="parallax">
     <!-- The CSS background-image for mobile. -->
     <div>
-        <h1>ANCHOR TAG DESIGN</h1>
-        <h2><span class="tagLine">"The tagline goes here."</span></h2>
+        <img src="../images/atd3.png" alt="Anchor Tag Design logo">
+        <h1 style="display:none;">Anchor Tag Design</h1>
+        <h2><span class="tagLine"><?php echo htmlspecialchars("<a href='holding_it_all_together'>ATD</a>"); ?></span></h2>
         <!-- The tagline is in the monospace font along with the user input buttons. -->
         <h3>Websites &nbsp; | &nbsp; Photography  &nbsp;| &nbsp; Graphics</h3>
     </div>

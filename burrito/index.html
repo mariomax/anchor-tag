@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <title>Burrito Masala</title>
+    <link href="https://fonts.googleapis.com/css?family=Hind+Madurai" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Yatra+One" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/helper.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/ef441b60f1.js"></script>
+</head>
+
+<body>
+    
+    <header>
+        <h1><span class="h1alt">Burrito</span> Masala</h1>
+    </header>
+    <!-- The span here is using .h1alt to show "Burrito" with a different font. The second font style is inherited from <h1> -->
+    <!-- The hero image is being placed as a background image with CSS. -->
+
+    <main>
+        
+        <p>घङचचजझठडढघगचकखगदऊषसछकखङचजझजझञटठचजझठढचझगघगघङचजजझचगझडचजझचजझठडढगघघञटडढचजझ</p>
+        <!-- This border text was cut and pasted in. The <P> is not controlling the font-face. -->
+        
+        <section class="contact section group">
+        <!-- The grid.css file helps to organize the elements into responsive columns. It's amazing. Follow this structure to create responsive grids. They're set up in units of 12 and have to have "section" and "group" as their classes. Each element will need a "col span_#_of_12" as the class for the specific <div> in order to work properly. The total amount of spans must equal 12. -->
+            <div class="col span_1_of_12">&nbsp;</div>
+            <!-- This is a "blank" column to get the following total units of 10 (instead of the usual 12) be centered. A 12th "blank" col isn't required. -->
+            <div class="col span_3_of_12">
+                <h2>SW 3rd & Alder Street<br>Portland, Oregon</h2></div>
+            <div class="col days span_4_of_12">
+                <h2>11am to 7pm<br>Every day!</h2>
+            </div>
+            <div class="col span_3_of_12">
+                <a href="tel:+5035555555">503-555-5555</a>
+                <h3>Call or text us to order!</h3></div>
+        </section>
+        
+        
+        <p>ङचजझचजझठढचझगघगघङचजजझचगझञटडढगघचठडजझञटडढगघघङचचकखगदऊषसछकखढगघजझचजठडचजझचजझठ</p>
+       
+        <!-- This is the "Options" section for mobile devices. -->
+        <section class="options section group">
+                <h4>1</h4>
+                <h5>Choose your option:<br>Burrito $7</h5>
+                <img src="images/burro-masala.jpg" alt="a burrito">
+                <h5>OR a Bowl $8</h5>
+                <img src="images/bowl-masala.jpg" alt="a burrito in a bowl">
+        </section>
+      
+        <!-- This is the desktop version of the "Options" section.
+        In the CSS, this section is set to display: none; in mobile AND tablet formats with .options2 -->  
+        <section class="options2 section group">
+            <div class="col span_3_of_12">
+                <h4>1</h4>
+                <h5>Choose your option:</h5>
+                <h5>A Burrito $7</h5>
+                <h5>OR</h5>
+                <h5>A Bowl $8</h5>
+                <!-- The above tags are used to make a separate line for each of these elements. -->
+            </div>
+            <div class="col span_4_of_12">
+                <img src="images/burro-masala.jpg" alt="a burrito">
+            </div>
+            <div class="col span_4_of_12">
+                <img src="images/bowl-masala.jpg" alt="burrito in a bowl">
+            </div>
+        </section>
+        
+        <!-- This is the mobile version of the "Meat" section. -->
+        <section class="meat">
+            <h4>2</h4>
+            <h5>Select a Meat,</h5>
+            <img src="images/tikka-chicken.jpg" alt="grilled chicken">
+            <ul>
+                <li>Chicken Tikka Masala</li>
+                <li>Lamb Curry</li>
+                <li>Pork in Salsa Verde</li>
+            </ul>
+        </section>
+        
+        <!-- This is the mobile version of the "Veg" section. -->
+        <section class="veg">
+            <h5>OR a Veggie</h5>
+            <img src="images/rolleno.jpg" alt="chile rollenos">
+            <ul>
+                <li>Sambar (vegan lentil curry)</li>
+                <li>Aloo Gobi Masala (vegan cauliflower and potatoes)</li>
+                <li>Chile Relleno (contains cheese)</li>
+            </ul>
+        </section>
+        
+        <!-- This is the desktop version of the "Choose a Meat or a Veggie" section. 
+        This section is set to display: none; in mobile format with the classes .meat2 and .veg2. -->
+        <section class="meat2 section group">
+            <div class="col span_3_of_12">
+                <h4>2</h4>
+                <h5>Select a Meat</h5>
+                <h5>OR</h5>
+            </div>
+            <div class="col span_5_of_12">
+                <img src="images/tikka-chicken.jpg" alt="grilled chicken">
+            </div>
+            <div class="col span_4_of_12">
+                <ul>
+                    <li>Chicken Tikka Masala</li>
+                    <li>Lamb Curry</li>
+                    <li>Pork in Salsa Verde</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="veg2 section group">
+            <div class="col span_3_of_12">
+                
+                <h5>a Veggie</h5>
+            </div>
+            <div class="col span_5_of_12">
+                <img src="images/rolleno.jpg" alt="chile rollenos">
+            </div>
+            <div class="col span_4_of_12">
+                <ul>
+                    <li>Sambar (vegan lentil curry)</li>
+                    <li>Aloo Gobi Masala (vegan cauliflower and potatoes)</li>
+                    <li>Chile Relleno (contains cheese)</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- The "Rice", "Toppings" and "Beverage" sections below change display from tablet size and up without having hidden versions like the two previous sections. -->
+        <section class="rice section group">
+            <div class="col span_3_of_12">
+                <h4>3</h4>
+                <h5>Pick a type of Rice:</h5>
+            </div>
+            <div class="col span_5_of_12">
+                <img src="images/rice.jpg" alt="a bowl of rice">
+            </div>
+            <div class="col span_4_of_12">
+                <ul>
+                    <li>Kerala Biryani</li>
+                    <li>Spanish Rice</li>
+                    <li>White or Brown Rice (Khaima)</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="adds section group">
+            <div class="col span_3_of_12">
+                <h4>4</h4>
+                <h5>Select your Toppings:</h5>
+            </div>
+            <!-- These elements are in the CSS "Adds" section. The border-radius: 100%; declaration gives them their circular outline. --> 
+            <div class="col span_5_of_12">
+                <img src="images/cheddar.jpg" alt="shredded cheddar">
+                <img src="images/salsa.jpg" alt="fresh salsa">
+                <img src="images/olives.jpg" alt="black olives">
+                <img src="images/sour-cream.jpg" alt="a side of sour cream">
+                <img src="images/raita.jpg" alt="cucumber raita">
+                <img src="images/chutney.jpg" alt="mango chutney">
+                <img src="images/tomatoes.jpg" alt="chopped tomatoes">
+                <img src="images/avo.jpg" alt="avocados">
+            </div>
+            <div class="col span_4_of_12">
+                <ul>
+                    <li>Mango Chutney</li>
+                    <li>Cucumbers</li>
+                    <li>Tomatillo Salsa</li>
+                    <li>Cilantro</li>
+                    <li>Raita</li>
+                    <li>Grandma Nena’s Fiery Red Salsa</li>
+                    <li>Cheese</li>
+                    <li>Sour cream</li>
+                    <li>Onions</li>
+                    <li>Tomatoes</li>
+                    <li>Guacamole add $.75</li>
+                </ul>
+            </div>
+        </section>
+        
+        <p>चकखगदऊचजझठढचझगघगघङचजजझचगझषसछकखडढगघगघजझञटठडचजझचजझठघङचजञटठडढचजझचजझठडढघङच</p>
+        
+            <section class="bevs section group">
+                <div class="col span_3_of_12">
+                    <h5>Beverages:</h5>
+                </div>
+                <div class="col span_5_of_12">
+                    <img src="images/sodas.jpg" alt="canned beverages">
+                </div>
+                <div class="col span_4_of_12">
+                    <!-- This is a table unlike the unordered lists above. Follow the HTML of the previous lists if you want to match the formatting here to match the <ul> items from the "Meat, Veg and Rice" sections. -->
+                    <table>
+                        <tr>
+                            <td>Soda, Diet or Root Beer</td>
+                            <td>$1.50</td>
+                        </tr>    
+                        <tr>
+                            <td>Lemon/Lime or Orange</td>
+                            <td>$2.00</td>
+                        </tr>   
+                        <tr>
+                            <td>Iced Tea or Fizzy Water</td>
+                            <td>$2.00</td>
+                        </tr> 
+                    </table>
+                </div>
+            </section>
+        
+        <p>डढचजझचजझगघञटचकखगदऊषसचजझठढचझगघगघङचजजझचगझछकखठडढचजझचगघङचजझञटडढगघघङचजजझठडढ</p>
+        
+        <section class="about">
+            <h5>Our Story - Our Mission</h5>
+            <p>Spicy jalapeno jowl sirloin ball tip, jerky sausage boudin picanha bacon biltong tail pork loin pork chop pork. Short loin boudin hamburger biltong doner, cupim swine pig picanha alcatra flank ball tip kielbasa. Chicken tongue tail sausage, pig salami swine drumstick meatball sirloin porchetta flank shank shankle. Ribeye flank meatball, short loin ham hock t-bone pork picanha. Ground round meatball shankle short loin pork loin, venison tail boudin filet mignon shank swine biltong t-bone jerky. Burgdoggen bresaola cow shoulder turkey hamburger, andouille meatball tenderloin tri-tip.</p>
+            <!-- This is obviously filler text. It's from baconipsum.com - it's the spicy version! -->
+        </section>
+        
+        <p>चजझठढचझगघगघङचजजझचगझडढचजझचकखगदऊषसछकखचजञचजझठढचझगघगघङचजजझचगझटडढडढचजझचजझगघगघङ</p>
+    </main>
+
+    <footer>
+        <!-- The .ahead <div> takes away the links to tap to call or text orders in the tablet and desktop views. -->
+        <div class="ahead">
+            <h3><a href="tel:+5035555555">Tap for PHONE order</a></h3>
+            <h5>OR</h5>
+            <h3><a href="sms:+5035555555">Tap for TEXT order</a></h3>
+        </div>
+        <h5>Tap to use the Google map.</h5>  
+            <a href="https://www.google.com/maps/place/SW+Alder+St+%26+SW+3rd+Ave,+Portland,+OR+97204/@45.5183968,-122.6764565,17z/data=!4m5!3m4!1s0x54950a05e9f31c37:0x147e3ce29232d353!8m2!3d45.5189193!4d-122.675169"><img src="images/g_map.jpg" alt="Google map of area"></a>
+            <!-- The https://... is from Google maps. It's just SW 3rd and Alder. Type in the exact address to get a closer hit. -->
+            <!-- The <img> here is a clickable link to the Google map. --> 
+        <section>
+            <h5>Follow us on Social Media</h5>
+            <!-- Font Awesome icons (www.fontawesome.com) are styled with an <i> just as if they were another text element. Replace the # in the href="#" with the exact URL of your preferred social media links. -->
+            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-yelp" aria-hidden="true"></i></a>
+            <a href="https://www.pinterest.com/mariolopriore/burrito-masala/"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+        </section>
+        
+        <p>&copy;2016 Mario Lopriore</p>
+        <!-- PLEASE, Call me if you have other questions - I'm here to help you make the most of your new site!!! (503) 351-3640 -->
+    </footer>
+    
+</body>
+
+</html>

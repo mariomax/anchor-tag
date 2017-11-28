@@ -3,7 +3,7 @@ include '../includes/db.inc.php';
 
 try
 {
-  $sql = 'SELECT content, image FROM about_section';
+  $sql = 'SELECT fa_icon, title, content FROM about_section';
   $result = $pdo->query($sql);
 }
 catch (PDOException $e)
@@ -16,8 +16,9 @@ catch (PDOException $e)
 foreach ($result as $row)
 {
     $about[] = array(
-        'content' => $row['content'],
-        'image' => $row['image']
+        'fa_icon' => $row['fa_icon'],
+        'title' => $row['title'],
+        'content' => $row['content']
     );
 }
 
