@@ -1,17 +1,7 @@
 <header>
-
-    <section class="section group" id="about">
-
-        <!-- Placing the logo in a grid above mobile size -->
-        <div class="col span_4_of_12">
-            <a href="/index.php"><img src="/images/" alt="Anchor Tag Design temp logo"></a>
-        </div>
-
-        <!-- Placing the title and tagline in a grid above mobile size -->
-        <div class="col span_8_of_12">
-            <h1 class="result_h1">Anchor Tag Design</h1>
-            <h2>"The tagline gors here."</h2>
-        </div>
-    </section>
-
+    <div class="errors">
+        <a href="../index.php"><img src="../images/atd.png" alt="Anchor Tag Design logo"></a>
+        <h2>OOPS!</h2>
+        <h3><i class="fa fa-hand-pointer-o" aria-hidden="true"></i>&nbsp;Click the logo to return to the site.</h3>
+    </div>
 </header>

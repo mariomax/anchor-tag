@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://www.anchortagdesign.com/</title>
+  <link>https://www.anchortagdesign.com/</link>
+
+<item>
+     <link>https://www.anchortagdesign.com/</link>
+     <title>Anchor Tag Design</title>
+     <description>Anchor Tag Design: Web Design | Photography | Graphic Design</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.anchortagdesign.com/ace/</link>
+     <title>Ace in the Hole MultiSport Events</title>
+     <description>Ace in the Hole MultiSport Events. Inclusive, safe, and fun triathalons.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.anchortagdesign.com/coyote/index.html</link>
+     <title>The Urban Coyote</title>
+     <description>The Urban Coyote</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.anchortagdesign.com/burrito/</link>
+     <title>Burrito Masala</title>
+     <description>Burrito Masala</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.anchortagdesign.com/cms/</link>
+     <title>The Range Finder</title>
+     <description>The Range Finder</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.anchortagdesign.com/ace/index.php</link>
+     <title>Ace in the Hole MultiSport Events</title>
+     <description>Ace in the Hole MultiSport Events. Inclusive, safe, and fun triathalons.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.anchortagdesign.com/coyote/gallery.html</link>
+     <title>The Urban Coyote Gallery</title>
+     <description>The Urban Coyote Gallery</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://www.anchortagdesign.com/coyote/links.html</link>
+     <title>The Urban Coyote</title>
+     <description>The Urban Coyote</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  

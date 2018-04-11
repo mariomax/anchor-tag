@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <title>The Range Finder</title>
+
+    <!-- Google fonts. Headline then Body font. -->
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif" rel="stylesheet">
+
+    <!-- Stylesheets in the css folder. -->
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/helper.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Font Awesome! -->
+    <script src="https://use.fontawesome.com/ef441b60f1.js"></script>
+
+    <!-- w3schools.com hamburger menu javascript-->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mobileNav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <nav>
+        <!-- This navigation system is from w3schools.com. It's actually intended for multi-page sites. The onclick="myFunction()" was added to all of the <a> so the dropdown menu closes when the target is met. --> <!-- return class="topnav" below -->
+        <ul class="topnav" id="mobileNav">
+            <li><a class="active" href="#home" onclick="myFunction()">Home</a></li>
+            <li><a href="#about" onclick="myFunction()">About</a></li>
+            <li><a href="#work" onclick="myFunction()">Recent Work</a></li>
+            <!-- This is the dropdown logo next to galleries. -->
+            <li><a href="#galleries" onclick="myFunction()">Galleries</a>
+                <!-- Removing the .subnav dropdown until the other pages are constructed.
+                <ul class="subnav">
+                    <li><a href="#">Landscapes</a></li>
+                    <li><a href="#">Fashion Images</a></li>
+                    <li><a href="#">Live Music</a></li>
+                    <li><a href="#">B&amp;W Film Work</a></li>
+                </ul>
+                End of comment. -->
+            </li>    
+            <li><a href="#contact" onclick="myFunction()">Contact</a></li>
+            <!-- This is the hamburger logo in the upper right. -->
+            <li class="icon active">
+                <a href="javascript:void(0);" onclick="myFunction()"><i class="fa fa-bars" aria-hidden="true"></i></a>
+            </li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <img src="images/arch_sunrise.jpg" alt="sunrise at Arches National Park">
+    </header>
+
+    <main>
+        <!-- Title -->
+        <h1>The Range Finder</h1>
+        <!-- Subtitle -->
+        <h2>Photographic work by<br>Craig Maynard Scott</h2>
+
+        <!-- Hard Return <hr> { @color4; width: 80%; } This is the small line after the title and subline. -->
+        <hr>
+
+        <section class="about section group" id="about">
+            <!-- Section heading -->
+            <h3>About my work</h3>
+            <!-- This is Bacon Ipsum (spicy version). Replace this with actual text. -->
+            <div class="close-up col span_3_of_12"><img src="images/mang_close-up.jpg" alt="close-up image of the artist"></div>
+            <div class="col span_9_of_12">
+                <p>Spicy jalapeno drumstick duis ea id pariatur dolore biltong. Mollit culpa in filet mignon chicken consequat, shankle commodo pork belly biltong eiusmod ball tip leberkas enim.Laborum fugiat laboris ut biltong dolore. Excepteur sunt ut duis burgdoggen incididunt ut. Porchetta strip steak esse lorem id.</p>
+
+                <p>Rump pariatur turducken id ham hock jerky filet mignon kielbasa. Veniam ipsum brisket, ribeye pork belly doner consectetur chuck pariatur meatloaf swine qui dolore hamburger bresaola. Do tempor in, nisi cow brisket cillum cupim ball tip minim. Picanha pork belly do ex reprehenderit rump t-bone jowl ea magna eiusmod short ribs. In beef doner enim, fatback t-bone tongue prosciutto brisket.</p>
+            </div>
+        </section>
+
+        <!-- This section is where more recent work will be added or replaced. The ID here is for the jump link in the navigation. -->
+        <section class="work section group" id="work">
+            <h3>Recent Work</h3>
+            <!-- The image and the <h4> are hyperlinks. The <h4> has a hover effect from the style.less file. -->
+            <!-- To update this area, cut and paste matching URLs where they are shown below. -->
+            <div class="work col span_6_of_12">
+                <a href="http://www.vivid-element.com/"><img src="images/ve_drea_landscape.jpg" alt="Vivid Element photoshoot"></a>
+                <!-- Change the <h4> to the appropriate name for the next "Recent Work" address. -->
+                <a href="http://www.vivid-element.com/"><h4>Vivid Element</h4></a>
+                <!-- Again, more Bacon Ipsum.  Replace with real content. -->
+                <p>Biltong andouille shoulder, meatball spare ribs turducken kevin do. Porch etta ipsum pariatur, biltong laborum ribeye proident tri-tip ex beef ribs ham. Drumstick lorem elit tempor land-jaeger in turkey fatback biltong beef andouille.</p>
+            </div>
+       
+            <!-- The image and the <h4> are hyperlinks. The <h4> has a hover effect from the style.less file. -->
+            <!-- To update this area, cut and paste matching URLs where they are shown below. -->
+            <div class="work col span_6_of_12">
+                <a href="http://www.oldtownmusicportland.com/"><img src="images/old_town_neon.jpg" alt="Old Town Music website images"></a>
+                <!-- Gallery title. Change the <h4> to the appropriate name for the next "Recent Work" address. -->
+                <a href="http://www.oldtownmusicportland.com/"><h4>Old Town Music</h4></a>
+                <!-- Again, more Bacon Ipsum - keeping it spicy.  Replace with real content. -->
+                <p>Pancetta doner pork belly. Id beef ribs labore pork belly cupidatat prosciutto tender loins pork loin eu capicola exercise. Sirloin beef jerky excepteur, dolor mollit pancetta. Doner in spare ribs tater picanha dolor nostrud ribeye aliqua excepteur bresaola.</p>
+            </div>
+        </section>
+
+        <section class="galleries section group" id="galleries">
+            <h3>Sample Galleries</h3>
+            <!-- Similar to above, the image and its title are both hyperlinks. The title has a hover effect. -->
+            <!-- All images are in the images file. Add new images there to insert then with <img src="images/filename.extension" alt="whatever"> -->
+            <!-- Replace the "#" with the URL of the other gallery pages when they're created. -->
+            <div class="work col span_6_of_12">
+                <a href="#"><img src="images/haystack.jpg" alt="Oregon coast with Haystack Rock"></a>
+                <a href="#"><h4>Landscapes</h4></a>
+
+                <a href="#"><img src="images/hoop_light.jpg" alt="hoola hoop time lapse photo"></a>
+                <a href="#"><h4>Fashion Images</h4></a>
+            </div>
+            
+            <div class="work col span_6_of_12">
+                <a href="#"><img src="images/man_yard.jpg" alt="Mang with goggles"></a>
+                <a href="#"><h4>Live Music</h4></a>
+
+                <a href="#"><img src="images/quad_silo.jpg" alt="black and white photo of a grain silo"></a>
+                <a href="#"><h4>B&amp;W Film Work</h4></a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contact">
+        <!-- Footer title -->
+        <h5>The Range Finder</h5>
+        <!-- This link activates phone to call the 10 digit number as shown below.
+        Change "tel:+5555551234" to your 10 digit number. Example "tel:+areadigits" -->
+        <h4><a href="tel:+9714049020">971-404-9020</a></h4>
+
+        <!-- Insert an eamil address below. Show as "mailto:youremail@whatever.com" 
+        There is a space between ...atever.com" target="_ ... as seen below. -->
+        <a href="mailto:thejazzguy@gmail.com" target="_top"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+
+        <!-- Font Awesome icons (www.fontawesome.com) are styled with the .fa class as if they were a text element. -->
+        <!-- Replace the # in the href="#" with the exact URL of your preferred social media sites. -->
+        <a href="https://www.facebook.com/heymaynard"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/apostlem/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.flickr.com/photos/jazzapostle/"><i class="fa fa-flickr" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/jazzapostle"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a href="https://www.pinterest.com/mariolopriore/the-range-finder/"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+        
+        <!-- Copyright info. -->
+        <h6>All images &copy; 2016 Craig Maynard Scott<br>
+        Website design &copy; 2016 Mario Lopriore</h6>
+    </footer>
+
+</body>
+
+</html>

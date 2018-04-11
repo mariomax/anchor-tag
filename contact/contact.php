@@ -4,9 +4,14 @@
         <meta charset="utf-8">
         <title>Contact Anchor Tag Design</title>
         <link href="../css/style.css" rel="stylesheet">
+         <script>
+           function onSubmit(token) {
+             document.getElementById("contactForm").submit();
+           }
+         </script>
     </head>
     
-        <form method="post" action="contact/index.php">
+        <form id="contactForm" method="post" action="contact/index.php">
             <label for="c_name">* Name:</label><br>
             <input type="text" name="c_name" id="c_name" placeholder="Your Name" required><br>
             
@@ -17,10 +22,15 @@
             <input type="text" name="c_phone" id="c_phone" placeholder="234-567-8910"><br>
             
             <label for="comments">Comments:</label><br>
-            <textarea rows="4" cols="50" placeholder="Comments and/or Questions?" type="text" name="comments" id="comments">
+            <textarea placeholder="Comments and/or Questions?" rows="4" cols="50" type="text" name="comments" id="comments">
             </textarea><br>
             
             <label>* Required Fields</label><br>
-            <input type="submit" value="3, 2, 1, Contact!">
+            
+            <!-- Robot detection - the honeypot! -->
+            <input type="hidden" name="email" id="email" value="" required><br>
+
+            <input type="submit" value="Submit">
         </form>
 </html>
+
