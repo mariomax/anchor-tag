@@ -11,6 +11,11 @@
          </script>
     </head>
     
+    
+    <!-- This is a PHP page! Why is there an HTML head? -->
+    
+    
+    
         <form id="contactForm" method="post" action="contact/index.php">
             <label for="c_name">* Name:</label><br>
             <input type="text" name="c_name" id="c_name" placeholder="Your Name" required><br>
@@ -24,7 +29,7 @@
             <label for="comments">Comments:</label><br>
             <textarea placeholder="Comments and/or Questions?" rows="4" cols="50" type="text" name="comments" id="comments">
             </textarea><br>
-            
+
             <label>* Required Fields</label><br>
             
             <!-- Robot detection - the honeypot! -->

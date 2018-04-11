@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ErrorDocument 404 /dev/404error.php
 
 # compress text, html, javascript, css, xml:
@@ -15,3 +16,6 @@ AddOutputFilterByType DEFLATE application/x-javascript
 <files *.html>
 SetOutputFilter DEFLATE
 </files>
+=======
+ErrorDocument 404 /dev/404error.php
+>>>>>>> 912eb72e56d9e17fc64037873d7c7f5ebc9dbde9
