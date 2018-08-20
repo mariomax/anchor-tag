@@ -1,12 +1,18 @@
 <?php
-// The top 37 lines (in full page view) are the section to add user responses to the database.
-// Only name (c_name) and email (c_email) are required fields.
-// PHP Mailer starts below that. It uses anchortagdesign@gmail.com as the scratch email.
+// The top 42 lines are the section to add user responses to the database.
+// Name (c_name), email (c_email), and the honeypot email (email) are required fields.
+// PHP Mailer starts below that. It uses anchortagdesign@gmail.com as the email connection.
+$honeypot = ($_POST['email']);
+if (!empty($honeypot)) {
+    exit;
+}
+
 if (isset($_POST['c_name'])) {
     $c_name = $_POST['c_name'];
     $c_email = $_POST['c_email'];
     $c_phone = $_POST['c_phone'];
     $comments = $_POST['comments'];
+    // $email = $_POST['email'];
 
     // Connection to the database.
     include '../includes/db.inc.php';
@@ -18,14 +24,16 @@ if (isset($_POST['c_name'])) {
             c_email = :c_email,
             c_phone = :c_phone,
             comments = :comments';
+            // email = :email';
         
-        // The $_POST['myName'] values need to match the "name" of the form field in the contact.html.php file.
+        // The $_POST['nameField'] values need to match the "name" of the form field in the contact.html.php file.
         // Field names need to match those from the database.
         $s = $pdo->prepare($sql);
         $s->bindValue(':c_name', $c_name);
         $s->bindValue(':c_email', $c_email);
         $s->bindValue(':c_phone', $c_phone);
         $s->bindValue(':comments', $comments);
+        // $s->bindValue(':email', $email);
 
         $s->execute();
     }
@@ -75,8 +83,8 @@ if (isset($_POST['c_name'])) {
 //Username to use for SMTP authentication - use full email address for gmail
     $mail->Username = "anchortagdesign@gmail.com";
 
-//Password to use for SMTP authentication
-    $mail->Password = "atDesign_17";
+//Password to use for SMTP authentication - was atDesign_17
+    $mail->Password = "MidMail18";
 
 //Set who the message is to be sent from
     $mail->setFrom('anchortagdesign@gmail.com', 'ATD Forms'); // This said 'Form Catcher' - the only reference on this page.
@@ -119,7 +127,5 @@ if (isset($_POST['c_name'])) {
     // The next curly bracket ends the initial if statement from line 5!
     // The else statement reloads the contact.html.php file if nothing was entered into the 'c_name' field.
 } else {
-    include('contact.php');
+    include 'contact.php';
 }
-
-

@@ -10,6 +10,11 @@ Programmer: Mario Lopriore
 @import 'mixins.less';
 @import 'palette.less';
 
+body {
+    margin: auto;
+    max-width: 1500px;
+}
+
 /* Styling the navigation */
 
 nav {
@@ -35,8 +40,8 @@ nav {
         top: 64%;
         padding-right: 8px;
         margin-top: -0.50em;
-        line-height: 1.2;
-        font-size: 18px;
+        line-height: 1.4;
+        font-size: 20px;
         font-weight: 200;
         vertical-align: middle;
         z-index: 99;
@@ -63,13 +68,13 @@ nav {
     .expand {
         display: block !important;
     }
-    /* This takes the larger menus out of play until min-width: 481px; */
-        .tablet-desk-menu {
+    /* Reemoves tablet and desktop menus until min-width: 481px; */
+    .tablet-desk-menu {
         display: none;
     }
 }
 
-/* Initial header style and specific mobile header styling. */
+/* Initial header and specific mobile header styling. */
 header {
     h1 {
         color: @color1;
@@ -79,13 +84,14 @@ header {
     img {
         display: block;
         margin: auto;
-        padding-top: .8em;
+        padding: 2.5em 0;
         width: 60%;
     }
     h3 {
         color: @color1;
         padding-bottom: 1em;
     }
+    // .tagline is specifically for the h2 elements in the headers. 
     .tagLine {
         color: @color3;
         font-family: @taglineFont;
@@ -94,7 +100,7 @@ header {
         text-align: center;
     }
     .mobile_hero {
-        background-image: url(../images/mobile_hero.jpg);
+        background-image: url(../images/mobile_heroB.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;
@@ -108,41 +114,66 @@ header {
             font-family: @taglineFont;
             font-size: 1.3em;
             font-weight: 600;
-            text-decoration: none; 
-        }   
+            text-decoration: none;
+        }
+        a:hover {
+            color: @color4;
+        }
+    }
+    .errors {
+        h2,
+        h3 {
+            color: @color2;
+            margin: auto;
+            padding: .5em 1em;
+        }
+        background-image: none;
+        img {
+            max-width: 70%;
+            margin: auto;
+            padding: 1.5em;
+        }
     }
 }
 
 /* Removing the tablet & desktop header. */
-
 .fullHeader {
     display: none;
 }
 
 /* Stying for Main and Section content. */
-
 main {
     background-color: @color1;
 }
-    h2 {
+
+.shade {
+//    border-top: 2px solid @color2;
+//    margin: 1em auto;
+    border-bottom: 2px solid @color3;
+    box-shadow: 0px 10px 10px @color3;
+    width: 100%;
+}
+
+h2 {
     color: @color5;
     font-family: @headlineFont;
     line-height: 1.3em;
-    text-align: center;  
+    padding-top: .8em;
+    text-align: center;
 }
-    h3 {
-        color: @color4;
-        font-family: @headlineFont;
-        line-height: 1.5em;
-        text-align: center;
-    }
-section {
 
+h3 {
+    color: @color4;
+    font-family: @headlineFont;
+    line-height: 1.5em;
+    text-align: center;
+}
+
+section {
     h4 {
-//        border-left: @color2 5px solid;
-        font-family: @headlineFont;
-        margin: .5em 1em .3em;
-        padding: 1em;
+        color: @color4;
+        font-family: @bodyFont;
+        text-align: center;
     }
     h5 {
         font-family: @bodyFont;
@@ -155,32 +186,88 @@ section {
         font-size: .8em;
         margin: .5em 3em;
     }
-    ul {
-        li {
-            font-family: @bodyFont;
-            line-height: 1.5em;
-            list-style-type: none;            
-            margin-left: 2.5em;
-        }
-    }
     p {
         color: @color5;
         display: block;
         font-family: @bodyFont;
         line-height: 1.5;
-        padding: 0 1.5em 1.2em;
-        margin: auto;
+        padding: 1.5em;
     }
 }
 
 .work {
+    a {
+        color: @color4;
+        text-decoration: none;
+    }
+    a:hover {
+        color: @color2;
+    }
     img {
         border: solid @color5;
         border-radius: 15px;
-        border-width: 20px 5px 30px 5px;
+        border-width: 30px 5px;
         display: block;
         margin: 1em auto;
         max-width: 75%;
+    }
+    p {
+        padding: .3em 1em 1.3em;
+    }
+}
+
+.about {
+    div {
+        .fa {
+            color: @color4;
+            display: block;
+            float: left;
+            font-size: 2em;
+            margin-top: .5em;
+            padding-left: .7em;
+        }
+    }
+    h3 {
+        padding-left: 4em;
+        text-align: left;
+    }
+    p {
+        clear: both;
+        line-height: 2em;
+        padding: .3em 1.5em 1.3em;
+    }
+}
+
+.process {
+    margin: 0 1em;
+    div {
+        .fa {
+            color: @color4;
+            display: block;
+            float: left;
+            font-size: 2em;
+            margin-top: .5em;
+            padding-left: .7em;
+        }
+    }
+    ul {
+        clear: both;
+        margin-bottom: .7em;
+        li {
+            font-family: @bodyFont;
+            line-height: 1.5em;
+            list-style-type: none;
+            margin-left: 3em;
+        }
+    }
+    ul li:before {
+        color: @color2;
+        content: "\00BB \0020";
+        margin-left: -1.5em;
+    }
+    h3 {
+        padding-left: 4em;
+        text-align: left;
     }
 }
 
@@ -199,7 +286,7 @@ form {
         padding: .5em;
     }
     input {
-        color: @color2;
+        color: @color5;
         font-family: @taglineFont;
         font-weight: 500;
     }
@@ -210,6 +297,9 @@ form {
         width: 95%;
     }
     input[type=submit] {
+        color: @color2;
+        font-family: @taglineFont;
+        font-weight: 600;
         margin: .5em;
     }
     textarea {
@@ -220,16 +310,31 @@ form {
     }
 }
 
-
 /* Style here to move the input areas away from the fields. */
-
 .inputArea {
     margin: 1em 0;
+}
+
+.contact {
+    p {
+        line-height: 2;
+        margin: auto;
+    }
+    img {
+        display: block;
+        margin: auto;
+        max-width: 80%;
+    }
+}
+
+.success {
+    margin: 1em 3em;
 }
 
 footer {
     background-color: @color5;
     color: @color1;
+    padding-bottom: 1.5em;
     text-align: center;
     div {
         .fa {
@@ -238,31 +343,26 @@ footer {
             text-align: center;
             padding: .7em .5em;
         }
+        .fa:hover {
+            color: @color2;
+        }
         img {
             display: inline-block;
         }
     }
     p {
         font-family: @bodyFont;
-        padding: .5em;
-        line-height: 1.2em;
+        line-height: 2em;
     }
 }
 
 
-
 /* ########################################################### TABLET CSS! */
-/* Tablet CSS code and up */
-@media only screen and (min-width: 481px) {
-    
-/* This can get taken care of after the desktop version is good to go... */
-   
-}
-  
-/* ########################################################### DESKTOP CSS! */
-/* Desktop CSS code and up */
 
-@media only screen and (min-width: 1025px) {
+
+/* Tablet CSS code and up */
+
+@media only screen and (min-width: 481px) {
     /* This is the navigation outside of the hamburger menu. */
     .menu-btn {
         display: none;
@@ -271,23 +371,33 @@ footer {
     .responsive-menu {
         display: none;
     }
+    /* Removing the mobile header. */
+    .mobileHeader {
+        display: none;
+    }
+    /* Restoring the desktop header. */
+    .fullHeader {
+        display: block;
+    }
     nav {
         margin-top: 0;
+        position: fixed;
+        max-width: 1500px;
+        width: 100%;
         .tablet-desk-menu {
             display: block;
             img {
-                margin: 0;
-                max-width: 35%;
+                margin: auto;
                 padding-left: .8em;
             }
             ul {
                 background-color: @color5;
-                margin-top: .5em;
+                padding: 0 1.5em;
                 text-align: right;
                 li {
                     display: inline;
                     font-size: 1.1em;
-                    font-weight: 600;
+                    font-weight: 500;
                     margin-left: 2.5em;
                     padding: 0 1em 0 0;
                     a {
@@ -302,48 +412,36 @@ footer {
                     }
                 }
             }
+            
         }
-    }    
-    
-
-    /* Removing the mobile header. */
-    .mobileHeader {
-        display: none;
+        .mini_logo {
+                display: none;
+            }
     }
-    
-    /* Restoring the desktop header. */
-    .fullHeader {
-        display: block;
-    }
-    
-    body {
-        background-image: url(../images/temp_hero_2.jpg);
+    /* Parallax effect for the desktop header/hero section. */
+    .parallax {
+        background-image: url(../images/temp_heroB.jpg);
+        height: 550px;
+        background-attachment: fixed;
         background-repeat: no-repeat;
-        background-size: contain;
-        background-position: 0 -30px;
-        width: 100%;
+        background-size: inherit;
     }
     /* Header adapted for tablet */
     header {
-        height: 650px;
-        padding: 5em;
-        h1 {
-            color: @color1;
-            font-family: @headlineFont;
-            font-size: 2.5em;
-            font-weight: 600;
-            padding: 2em 0 1em;
-            text-align: center;
+        img {
+            max-width: 30%;
+            padding: 6em 1em 0;
         }
         h2 {
             color: @color1;
-            font-weight: 500;
+            font-weight: 600;
             text-align: center;
         }
         h3 {
             color: @color1;
             font-family: @headlineFont;
             font-weight: 500;
+            padding: 0;
             text-align: center;
         }
         button {
@@ -351,22 +449,140 @@ footer {
             font-family: @taglineFont;
             margin: auto;
         }
-
+        // This needs to be styled! ######### HELLO!
+        .errors {
+            h2,
+            h3 {
+                color: @color1;
+                margin: auto;
+                padding: 1.5em;
+            }
+            background-image: none;
+            img {
+                max-width: 25%;
+            }
+        }
     }
     section {
+        h2 {
+            padding-top: 55px;
+        }
+    }
+    .work {
+        margin: 0 3em;
+        img {
+            border-width: 30px 6px 45px;
+            margin: 1em auto 3em;
+        }
+        p {
+            font-size: .8em;
+            line-height: 1.3;
+            padding: .5em 0;
+            text-align: left;
+        }
+    }
+    .about {
+        margin-left: .3em;
+        margin-right: .3em;
+        div {
+            .fa {
+                margin-top: .5em;
+                padding-left: 1.6em;
+            }
+        }
         h3 {
-            font-weight: 700;
+            padding-left: 5em;
+        }
+        p {
+            line-height: 1.5em;
+            padding: .8em 3.2em;
+        }
+    }
+    .process {
+        margin: 0 .3em;
+        div {
+            .fa {
+                margin-top: .5em;
+                padding-left: .2em;
+            }
+        }
+        h3 {
+            padding-left: 3em;
+        }
+        ul {
+            li {
+                font-size: .7em;
+                line-height: 2.5em;
+                margin-left: 2em;
+            }
+        }
+    }
+    .contact {
+        p {
+            line-height: 1.5em;
+            padding: .5em;
+        }
+        img {
+            margin: auto;
+            max-width: 95%;
+        }
+    }
+}
+
+
+/* ########################################################### DESKTOP CSS! */
+
+
+/* Desktop CSS code and up */
+
+@media only screen and (min-width: 1025px) {
+    nav {
+        .tablet-desk-menu {
+            img {
+                max-width: 70%;
+            }
+            ul {
+                margin-top: .5em;
+            }
+            .mini_logo {
+                display: block;
+            }
+        }
+    }
+    /* Parallax effect for the desktop header/hero section. */
+    .parallax {
+        height: 750px;
+        background-size: cover;
+    }
+    /* Header adapted for desktop. */
+    header {
+        padding: 5em;
+        // This needs to be styled!  ########HELLO!
+        .errors {
+            h2,
+            h3 {
+                color: @color1;
+                margin: auto;
+                padding: 1.5em;
+            }
+            background-image: none;
+            img {
+                max-width: 25%;
+            }
+        }
+    }
+    section {
+        h2 {
+            margin-top: 60px;
+            padding-top: 40px;
+        }
+        h3 {
+            font-weight: 500;
             font-size: 1.5em;
-            padding: 0 2em;
             text-align: center;
         }
         h4 {
-            color: @color4;
-            font-family: @headlineFont;
-        }
-        p {
-            padding: .5em 2em;
-            line-height: 1.5em;
+            font-size: 1.3em;
         }
         ul {
             li {
@@ -376,44 +592,56 @@ footer {
             }
         }
     }
-    form {
-        text-align: left;
-        label {
-            padding: .5em;
-        }
-    }
     .work {
         img {
-            border-width: 30px 5px 50px 5px;
+            border-width: 40px 8px 65px 8px;
         }
         p {
             font-size: .9em;
-            margin-bottom: 2em;
-            padding: 0 4em;
-            text-align: center;
+            line-height: 1.8;
+        }
+    }
+    .about {
+        margin-left: 8em;
+        margin-right: 8em;
+        div {
+            .fa {
+                margin-top: .8em;
+            }
+        }
+        h3 {
+            padding-left: 4em;
+        }
+        p {
+            line-height: 2em;
+        }
+    }
+    .process {
+        margin: 0 1em;
+        div {
+            .fa {
+                margin-top: .8em;
+                padding-left: 1em;
+            }
+        }
+        ul {
+            li {
+                font-size: .9em;
+                margin-left: 2.5em;
+            }
+        }
+    }
+    form {
+        margin-left: 3em;
+        padding: 2em 1em;
+    }
+    .contact {
+        p {
+            line-height: 2em;
+            padding: 1em;
+        }
+        img {
+            max-width: 95%;
         }
     }
 }
-
-//    section {
-//        h4 {
-//            font-size: 1.2em;
-//            margin: .8em 2em .3em;
-//        }
-//        h5 {
-//            margin: 1em 4.5em;
-//        }
-//        h6 {
-//            font-size: 1.2em;
-//            margin: .5em 5em;
-//        }
-//        p {
-//            font-size: 1.2em;
-//            padding: .5em 3em;
-//        }
-//        ul {
-//            li {
-//                margin-left: 5em;
-//            }
-//        }
-//    }
