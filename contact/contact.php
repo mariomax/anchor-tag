@@ -24,7 +24,7 @@
             <label for="comments">Comments:</label><br>
             <textarea placeholder="Comments and/or Questions?" rows="4" cols="50" type="text" name="comments" id="comments">
             </textarea><br>
-            
+
             <label>* Required Fields</label><br>
             
             <!-- Robot detection - the honeypot! -->
